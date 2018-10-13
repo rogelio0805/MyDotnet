@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ExploreCalifornia.Models.Post>
+@{
+    Layout = "_SimpleLayout";
+}
+
+<h2>Explorer's Blog</h2>
+
+<p>
+    Below are a few of of the lastest posts from some of our explorers.
+</p>
+
+<div class="blog-posts">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_Post", item)
+    }
+
+</div>
+
